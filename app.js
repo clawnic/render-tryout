@@ -9,6 +9,12 @@ const server = app.listen(port, () => console.log(`Example app listening on port
 server.keepAliveTimeout = 120 * 1000;
 server.headersTimeout = 120 * 1000;
 
+app.get("/user",(req,res)=>{
+  res.send({
+    "msg":"hello user"
+  });
+});
+
 const html = `
 <!DOCTYPE html>
 <html>
@@ -54,7 +60,7 @@ const html = `
   </head>
   <body>
     <section>
-      Hello from Render!
+      Hey this is Dhruv!
     </section>
   </body>
 </html>
